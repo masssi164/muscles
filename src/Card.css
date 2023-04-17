@@ -1,0 +1,94 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid chocolate;
+    border-color: chocolate;
+    padding:5px;
+    background-color: royalblue;
+}
+
+.FirstRow {
+    border: 0;
+    display:flex;
+    flex-direction: row;
+}
+
+
+
+.Orego {
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    align-self: flex-start;
+}
+
+.Innervation {
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    padding: 10;
+}
+
+.Functions {
+    display: flex;
+    flex-direction: column;
+    padding:10
+}
+
+
+
+.BlendenInnervation {
+    borrder:1px solid gray;
+    font-style: italic;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Orego_button {
+
+}
+
+.Insertion {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+}
+
+.Insertio_button {
+
+}
+
+.Innervation_button {
+
+}
+
+.FunctionsButton {
+    
+}
+
+.secondRow {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.MuskelName {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: larger;   
+ color:violet;
+ text-align: center;
+ text-decoration: underline;
+ animation: TextAnimation 3s  infinite
+}
+
+@keyframes TextAnimation {
+    100% {
+        flex-grow: 5;
+    }
+}
+
+.CenterView {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}

@@ -1,0 +1,110 @@
+/* Allgemeine Styles für die Player-Komponente */
+.player {
+    /* Zentrierung der Player-Komponente horizontal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Styles für den Namen des Spielers */
+  .player-name {
+    /* Deine Styles hier */
+    /* Zentrierung des Spielernamens horizontal */
+    text-align: center;
+  }
+  
+  /* Styles für den Hinweis, dass der Spieler an der Reihe ist */
+  .current-player {
+    /* Deine Styles hier */
+  }
+  
+  /* Styles für die Anzahl der Karten des Spielers */
+  .number-of-cards {
+    /* Deine Styles hier */
+  }
+  
+  /* Styles für die Karten-Auswahl */
+  .card-select {
+    /* Deine Styles hier */
+    /* Karten in einer Reihe anordnen, linke Ausrichtung */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  /* Styles für die aktuell ausgewählte Karte */
+  .current-cards-heading {
+    /* Deine Styles hier */
+    /* Kartenname in der Mitte ausrichten */
+    text-align: center;
+  }
+  
+  /* Styles für die Ablage- und Ziehen-Buttons */
+  .actions {
+    /* Deine Styles hier */
+    /* Buttons rechts ausrichten */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .putter {
+    /* Deine Styles hier */
+  }
+  
+  .puller {
+    /* Deine Styles hier */
+  }
+  
+  /* Styles für die Nachricht, wenn der Spieler keine Karten mehr hat */
+  .no-cards-message {
+    /* Deine Styles hier */
+  }
+  
+  /* Styles für das Dialogfenster, wenn das Spiel beendet ist */
+  .finished-dialog {
+    /* Deine Styles hier */
+  }
+  
+  /* Styles für die Karten */
+  .card {
+    /* Deine Styles hier */
+    background-color: #f39c12; /* Gelbe Hintergrundfarbe für die Karten */
+    color: #000; /* Schwarzer Text für die Karten */
+    font-size: 14px;
+    padding: 8px;
+    margin-right: 8px;
+    border-radius: 4px;
+  }
+  
+  /* Hover-Effekt für die Karten */
+  .card:hover {
+    /* Deine Styles hier */
+    background-color: #27ae60; /* Dunklere Smaragdgrüne Farbe für den Hover-Effekt */
+  }
+  
+  /* Aktuell ausgewählte Karte */
+  .card.selected {
+    /* Deine Styles hier */
+    background-color: #9b59b6; /* Violette Farbe für die ausgewählte Karte */
+  }
+  
+  /* Kartenname auf den Karten */
+  .card-name {
+    /* Deine Styles hier */
+    font-size: 14px;
+    text-align: center;
+    padding: 4px;
+  }
+  
+  /* Anzahl der Karten auf den Karten */
+  .card-count {
+    /* Deine Styles hier */
+    font-size: 12px;
+    text-align: center;
+    padding: 2px;
+    background-color: #9b59b6; /* Violette Farbe für die Anzahl der Karten */
+    border-radius: 2px;
+    color: #fff; /* Weißer Text für die Anzahl der Karten */
+  }
+  

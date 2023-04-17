@@ -1,0 +1,48 @@
+/* styles.css */
+
+.report-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .report-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .report-item {
+    margin-bottom: 16px;
+  }
+  
+  .report-action {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .report-playername {
+    font-size: 14px;
+  }
+  
+  .report-correctness {
+    font-size: 14px;
+  }
+  
+  .report-explanation {
+    font-size: 14px;
+  }
+  
+  .report-button {
+    margin-top: 16px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .report-button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,22 @@
+.finished-dialog {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    padding: 20px;
+  }
+  
+  .finished-dialog--win {
+    background-color: violet;
+  }
+  
+  .finished-dialog--loss {
+    background-color: yellow;
+  }
+  
+  .win-message {
+    color: #ffffff;
+  }
+  
+  .loss-message {
+    color: #000000;
+  }
+  

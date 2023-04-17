@@ -1,0 +1,51 @@
+/* Styles für den Zustand "submitted == true" */
+.name-dialog--submitted-true {
+    background-color: #8a2be2; /* Violet */
+    color: #ffffff; /* Weiß */
+    /* Weitere Styles für den Dialog im Zustand "submitted == true" */
+  }
+  
+  /* Styles für den Zustand "submitted == false" */
+  .name-dialog--submitted-false {
+    background-color: #ffff00; /* Gelb */
+    color: #000000; /* Schwarz */
+    /* Weitere Styles für den Dialog im Zustand "submitted == false" */
+  }
+  
+  /* Gemeinsame Styles für den NameDialog */
+.name-dialog {
+    padding: 20px; /* Innenabstand von 20px */
+    max-width: 400px; /* Maximale Breite von 400px */
+    margin: 0 auto; /* Zentrierung im Container */
+    border: 1px solid #000000; /* 1px schwarzer Rand */
+    border-radius: 4px; /* Abrundung der Ecken mit 4px */
+    font-family: Arial, sans-serif; /* Schriftart Arial oder eine Standardschriftart ohne Serifen */
+  }
+  
+  /* Styles für den Titel des NameDialog */
+  .name-dialog__title {
+    font-size: 24px; /* Schriftgröße von 24px */
+    font-weight: bold; /* Fette Schrift */
+    margin-bottom: 10px; /* Untenabstand von 10px */
+  }
+  
+  /* Styles für das Eingabefeld des Namens im NameDialog */
+  .name-dialog__input {
+    width: 100%; /* Volle Breite */
+    padding: 8px; /* Innenabstand von 8px */
+    margin-bottom: 10px; /* Untenabstand von 10px */
+    border: 1px solid #000000; /* 1px schwarzer Rand */
+    border-radius: 4px; /* Abrundung der Ecken mit 4px */
+  }
+  
+  /* Styles für den Button "Name ändern" im NameDialog */
+  .name-dialog__button {
+    background-color: #8a2be2; /* Violet */
+    color: #ffffff; /* Weiß */
+    padding: 10px 20px; /* Innenabstand von 10px oben/unten und 20px links/rechts */
+    border: none; /* Kein Rand */
+    border-radius: 4px; /* Abrundung der Ecken mit 4px */
+    font-size: 16px; /* Schriftgröße von 16px */
+    cursor: pointer; /* Zeiger-Cursor bei Mouseover */
+  }
+  
