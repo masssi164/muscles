@@ -20,8 +20,9 @@ export const WorkFlow: React.FC<props> = ({ mode }) => {
     const [currentRound, setCurrentRound] = useState<number>(0);
     
     const [playReport, setPlayReport] = useState<Report>({ entries:[]})
-    const apiUrl =process.env.REACT_APP_API_URL as string
-    const communication:ServerCommunication = new ServerCommunication(apiUrl,3001)
+    const apiUrl:string =process.env.REACT_APP_API_URL
+    const apiPort:number =process.env.REACT_APP_API_PORT
+    const communication:ServerCommunication = new ServerCommunication(apiUrl,apiPort)
   const [system, setSystem] = useState<System>({
     name:"System",
     cards:[],
