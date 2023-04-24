@@ -8,6 +8,7 @@ import "./Player.css"
 export const Player: React.FC<Props> = ({ player, communication, drawCard, playCard, starterCards, indexOfCurrentPlayer }) => {
   const { name, cards, index } = player;
   const [currentCard, setCurrentCard] = useState<string | undefined>(cards.length >0?cards[0]:undefined);
+  
   const jumpToCurrentPlayer = useRef<HTMLDivElement | null>(null)
   const [wasFocused, setWasFocused] = useState(false)
   const pullButton = useRef<HTMLButtonElement |null>(null)
@@ -43,6 +44,8 @@ export const Player: React.FC<Props> = ({ player, communication, drawCard, playC
   })
   },[player,indexOfCurrentPlayer,cards,currentCard])
 
+  const [noInfoOfCurrentCard, setNoInfoOfCurrentCard] =useState<boolean>(false)
+  
   return (
     <div>
       <h2 data-testid="player-name" className="player-name">{name}</h2>
@@ -79,19 +82,36 @@ export const Player: React.FC<Props> = ({ player, communication, drawCard, playC
               </select>
               {currentCard && (
                 <div className="Card">
-                  <Card name={currentCard} connection={communication}  />
+                  <Card name={currentCard} connection={communication}  noInformation={noInfoOfCurrentCard} />
                 </div>
               )}
               {currentCard && (
                 <div className="Actions">
                 <button ref={putButton} className="Putter"  onClick={() => {
+                  setNoInfoOfCurrentCard(true)
+
                   playCard(index, currentCard)
                   cards.length >1?setCurrentCard(undefined):cards.filter(card => card !== currentCard).length >0?setCurrentCard(cards.filter(card => card !== currentCard)[0]):setCurrentCard(cards[0])
+                  setNoInfoOfCurrentCard(false)
                 }} data-testid="put-button">
 Ablegen
 </button>
-<button ref={pullButton} className="Puller" onClick={() => drawCard(index)} data-testid="pull-button">
+<button ref={pullButton} className="Puller" onClick={() => {
+s             setNoInfoOfCurrentCard(true)
+
+                  playCard(index, currentCard)
+                  cards.length >1?setCurrentCard(undefined):cards.filter(card => card !== currentCard).length >0?setCurrentCard(cards.filter(card => card !== currentCard)[0]):setCurrentCard(cards[0])
+                  setNoInfoOfCurrentCard(false)
+                }} data-testid="put-button">
+Ablegen
+</button>
+<button ref={pullButton} className="Puller" onClick={() => {
+  setNoInfoOfCurrentCard(true)
+  drawCard(index)
+  setNoInfoOfCurrentCard(false)
+}} data-testid="pull-button">
 Ziehen
+
 </button>
 </div>
 )}

@@ -23,7 +23,8 @@ export interface CardStruct {
 
 interface IProps {
     name:string,
-    connection:ServerCommunication
+    connection:ServerCommunication,
+    noInformation?:boollean | undefined
 }
 
 
@@ -35,6 +36,12 @@ function Card (props:IProps) {
     const [insertiones, setInsertiones] = useState<null | Array<string>>(null)
     const [innervation, setInnervation] = useState<null | string>(null)
     const [joints, setJoints] = useState<null | Array<Joints>>(null)
+    if(props.noInformation) {
+        setInsertiones(null)
+        setInnervation(null)
+        setOregines(null)
+        setJoints(null)
+    }
     return(
         <div className="Card" aria-label={props.name}>
             <div className="FirstRow">
