@@ -17,7 +17,6 @@ COPY . .
 ENV REACT_APP_API_URL=https://api.example.com
 ENV REACT_APP_API_PORT=3001
 
-RUN node -e "process.env.REACT_APP_API_PORT = parseInt(process.env.REACT_APP_API_PORT)"
 # Baue die React-Anwendung
 RUN npm run build
 

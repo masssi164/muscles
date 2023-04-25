@@ -9,8 +9,7 @@ import { PlayReport } from "./PlayReport";
 import DiscardStackComponent from "./DisCardStackComponent";
 import { playFlipSound, playPoundingSound, playShuffleAndCardFlipSound } from "./SoundPlayer";
 
-
-type GameMode = "singleplayer" | "multiplayer";
+export type GameMode = "singleplayer" | "multiplayer";
 
 interface props {
     mode:GameMode
@@ -21,7 +20,7 @@ export const WorkFlow: React.FC<props> = ({ mode }) => {
     
     const [playReport, setPlayReport] = useState<Report>({ entries:[]})
     const apiUrl:string =process.env.REACT_APP_API_URL
-    const apiPort:number =process.env.REACT_APP_API_PORT
+    const apiPort:number =process.env.REACT_APP_API_PORT as number
     const communication:ServerCommunication = new ServerCommunication(apiUrl,apiPort)
   const [system, setSystem] = useState<System>({
     name:"System",
