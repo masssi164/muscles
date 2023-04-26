@@ -97,7 +97,7 @@ export const Player: React.FC<Props> = ({ player, communication, drawCard, playC
 Ablegen
 </button>
 <button ref={pullButton} className="Puller" onClick={() => {
-s             setNoInfoOfCurrentCard(true)
+             setNoInfoOfCurrentCard(true)
 
                   playCard(index, currentCard)
                   cards.length >1?setCurrentCard(undefined):cards.filter(card => card !== currentCard).length >0?setCurrentCard(cards.filter(card => card !== currentCard)[0]):setCurrentCard(cards[0])
