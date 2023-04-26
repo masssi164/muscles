@@ -24,7 +24,7 @@ export interface CardStruct {
 interface IProps {
     name:string,
     connection:ServerCommunication,
-    noInformation?:boollean | undefined
+    noInformation?:boolean | undefined
 }
 
 
